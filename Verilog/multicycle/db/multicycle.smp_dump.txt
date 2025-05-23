@@ -1,0 +1,15 @@
+
+State Machine - |mainFSM|current_state
+Name current_state.JAL current_state.BEQ current_state.ALU_WB current_state.EXECUTE_I current_state.EXECUTE_R current_state.MEM_WRITE current_state.MEM_WB current_state.MEM_READ current_state.MEM_ADR current_state.DECODE current_state.FETCH current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.FETCH 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.DECODE 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.MEM_ADR 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.MEM_READ 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.MEM_WB 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.MEM_WRITE 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.EXECUTE_R 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.EXECUTE_I 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.ALU_WB 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.BEQ 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.JAL 1 0 0 0 0 0 0 0 0 0 0 1 
