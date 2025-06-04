@@ -16,6 +16,13 @@ typedef enum {
     MCAL_PORTE = SIM_SCGC5_PORTE_MASK
 } MCAL_PortClockMask_t;
 
+typedef enum {
+    GPIO_PULL_NONE,
+    GPIO_PULL_UP,
+    GPIO_PULL_DOWN
+} GPIO_Pull_t;
+
+
 /** Generic port structure */
 typedef struct {
     PORT_Type *port;    // PCR registers
@@ -48,12 +55,12 @@ void MCAL_GPIO_ConfigOutput(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPI
 /**
  * Configure pin as digital input (with pull-up)
  */
-void MCAL_GPIO_ConfigInput(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux);
+void MCAL_GPIO_ConfigInput(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux, GPIO_Pull_t pull);
 
 /**
  * Configure pin as ALT (PWM, UART)
  */
-void MCAL_GPIO_ConfigALT(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux);
+void MCAL_GPIO_ConfigALT(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux, GPIO_Pull_t pull);
 
 
 /**

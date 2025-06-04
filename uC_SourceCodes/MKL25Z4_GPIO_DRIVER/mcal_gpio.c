@@ -19,22 +19,23 @@ void MCAL_GPIO_ConfigOutput(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPI
     port_info->gpio->PDDR |= (1UL << pin);
 }
 
-/**
- * Configure pin as digital input (with pull-up)
- */
-void MCAL_GPIO_ConfigInput(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux) {
-	port_info->port->PCR[pin] =PORT_PCR_MUX(1) | PORT_PCR_PE_MASK | PORT_PCR_PS_MASK;
-	port_info->gpio->PDDR &=~(1UL << pin);
+static uint32_t _get_pull_mask(GPIO_Pull_t pull) {
+    switch (pull) {
+        case GPIO_PULL_UP: return PORT_PCR_PE_MASK | PORT_PCR_PS_MASK;
+        case GPIO_PULL_DOWN: return PORT_PCR_PE_MASK;
+        default: return 0;
+    }
 }
 
-/**
- * Configure pin as ALT (PWM, UART)
- */
-void MCAL_GPIO_ConfigALT(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux){
-    port_info->port->PCR[pin] |= PORT_PCR_PE_MASK | PORT_PCR_PS_MASK;  // Optional
-    port_info->port->PCR[pin] = PORT_PCR_MUX(mux);
-
+void MCAL_GPIO_ConfigInput(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux, GPIO_Pull_t pull) {
+    port_info->port->PCR[pin] = PORT_PCR_MUX(mux) | _get_pull_mask(pull);
+    port_info->gpio->PDDR &= ~(1UL << pin);
 }
+
+void MCAL_GPIO_ConfigALT(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux, GPIO_Pull_t pull) {
+    port_info->port->PCR[pin] = PORT_PCR_MUX(mux) | _get_pull_mask(pull);
+}
+
 
 /**
  * Write pin: value=1 sets pin, value=0 clears pin

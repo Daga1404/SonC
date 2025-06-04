@@ -11,14 +11,14 @@ typedef enum {
     GPIO_DIR_ALT
 } GPIO_Direction_t;
 
-
-// GPIO configuration struct
 typedef struct {
     const MCAL_GPIO_Port_t *port_info;
     uint32_t pin;
     GPIO_Direction_t direction;
     GPIO_Mux_t mux;
+    GPIO_Pull_t pull;
 } GPIO_Config_t;
+
 /**
  * Initialize a GPIO pin for digital output
  */
@@ -27,12 +27,12 @@ void HAL_GPIO_InitOutput(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_M
 /**
  * Initialize a GPIO pin for digital input
  */
-void HAL_GPIO_InitInput(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux);
+void HAL_GPIO_InitInput(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux, GPIO_Pull_t pull);
 
 /**
  * Initialize a GPIO pin for ALT (PWM, UART)
  */
-void HAL_GPIO_InitALT(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux);
+void HAL_GPIO_InitALT(const MCAL_GPIO_Port_t *port_info, uint32_t pin, GPIO_Mux_t mux, GPIO_Pull_t pull);
 
 /**
  * Set the GPIO pin state
