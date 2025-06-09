@@ -1,0 +1,167 @@
+module pipelined_datapath(input         clk, reset,
+                          input  [31:0] instrF,
+                          input  [31:0] readdataM,
+                          output [31:0] pcF,
+                          output [31:0] aluoutM, writedataM,
+                          input        memwriteM);
+
+  wire [1:0] resultsrcE;
+
+  // ---------------------------
+  // Hazard Detection
+  wire stallF, stallD, flushE;
+  wire memreadE = (resultsrcE == 2'b01); // assumes 01 means load
+
+  hazard_unit hazard_unit_inst(
+    .rs1D(rs1D), .rs2D(rs2D), .rdE(rdE),
+    .memreadE(memreadE),
+    .stallF(stallF), .stallD(stallD), .flushE(flushE)
+  );
+
+  // ---------------------------
+  // IF Stage
+  wire [31:0] pcplus4F, pcnextF;
+  assign pcplus4F = pcF + 4;
+  assign pcnextF = pcplus4F; // no branching yet
+
+  wire pcen = ~stallF;
+  flopenr #(32) pcreg(clk, reset, pcen, pcnextF, pcF);
+
+  // IF/ID Register
+  wire [31:0] pcD, instrD;
+  wire [31:0] instr_input = stallD ? instrD : instrF;
+  wire [31:0] pc_input = stallD ? pcD : pcF;
+  if_id if_id_reg(clk, reset, pc_input, instr_input, pcD, instrD);
+
+  // ---------------------------
+  // ID Stage
+  wire [4:0] rs1D = instrD[19:15];
+  wire [4:0] rs2D = instrD[24:20];
+  wire [4:0] rdD  = instrD[11:7];
+
+  wire [31:0] rd1D, rd2D;
+  wire [31:0] immextD;
+  wire [2:0]  alucontrolD;
+  wire        alusrcD, regwriteD, memwriteD;
+  wire [1:0]  resultsrcD;
+  wire [1:0]  immsrcD;
+
+  regfile rf(clk, regwriteW, rs1D, rs2D, rdW, resultW, rd1D, rd2D);
+  extend ext(instrD[31:7], immsrcD, immextD);
+
+  // ID/EX Register
+  wire [31:0] pcE, rd1E, rd2E, immextE;
+  wire [4:0] rs1E, rs2E, rdE;
+  wire [2:0] alucontrolE;
+  wire       alusrcE, regwriteE, memwriteE;
+  wire [1:0] resultsrcE;
+
+  wire flush_idex = flushE;
+  wire rst_idex = reset | flush_idex;
+  id_ex id_ex_reg(clk, rst_idex,
+                  pcD, rd1D, rd2D, immextD,
+                  rs1D, rs2D, rdD,
+                  alucontrolD,
+                  alusrcD, regwriteD, memwriteD,
+                  resultsrcD,
+                  pcE, rd1E, rd2E, immextE,
+                  rs1E, rs2E, rdE,
+                  alucontrolE,
+                  alusrcE, regwriteE, memwriteE,
+                  resultsrcE);
+
+  // ---------------------------
+// Declarations for EX stage
+wire [31:0] aluoutE;
+wire dummyZero;
+
+// Used by EX stage for forwarding from WB
+reg [31:0] resultW;
+
+// ---------------------------
+// EX Stage with Forwarding
+
+
+  // ---------------------------
+  // EX Stage with Forwarding
+  wire [1:0] forwardAE, forwardBE;
+  reg [31:0] srcAE, srcB_input;
+  wire [31:0] srcBE;
+
+
+  forwarding_unit fwd(
+    .rs1E(rs1E), .rs2E(rs2E),
+    .rdM(rdM), .rdW(rdW),
+    .regwriteM(regwriteM), .regwriteW(regwriteW),
+    .forwardAE(forwardAE), .forwardBE(forwardBE)
+  );
+
+  // Forwarding MUXes
+  always @(*) begin
+    case (forwardAE)
+      2'b00: srcAE = rd1E;
+      2'b10: srcAE = aluoutM;
+      2'b01: srcAE = resultW;
+      default: srcAE = 32'bx;
+    endcase
+
+    case (forwardBE)
+      2'b00: srcB_input = rd2E;
+      2'b10: srcB_input = aluoutM;
+      2'b01: srcB_input = resultW;
+      default: srcB_input = 32'bx;
+    endcase
+  end
+
+  assign srcBE = alusrcE ? immextE : srcB_input;
+
+  alu alu(srcAE, srcBE, alucontrolE, aluoutE, dummyZero);
+
+  // EX/MEM Register
+  wire [31:0] pcM;
+  wire [4:0] rdM;
+  wire [1:0] resultsrcM;
+  wire       regwriteM;
+
+  ex_mem ex_mem_reg(clk, reset,
+                    aluoutE, rd2E, pcE, rdE,
+                    regwriteE, memwriteE, resultsrcE,
+                    aluoutM, writedataM, pcM, rdM,
+                    regwriteM, memwriteM, resultsrcM);
+
+  // ---------------------------
+  // MEM Stage
+  // (Handled externally through data memory access)
+
+  // MEM/WB Register
+  wire [31:0] pcW, aluoutW, readdataW;
+  wire [4:0] rdW;
+  wire [1:0] resultsrcW;
+  wire       regwriteW;
+
+  mem_wb mem_wb_reg(clk, reset,
+                    readdataM, aluoutM, pcM, rdM,
+                    regwriteM, resultsrcM,
+                    readdataW, aluoutW, pcW, rdW,
+                    regwriteW, resultsrcW);
+
+  // ---------------------------
+  // WB Stage (Register Write-Back)
+  reg [31:0] resultW;
+
+
+  always @(*) begin
+    case (resultsrcW)
+      2'b00: resultW = aluoutW;
+      2'b01: resultW = readdataW;
+      2'b10: resultW = pcW + 4;
+      default: resultW = 32'bx;
+    endcase
+  end
+
+  // Write-back connection can be made externally using:
+  // regfile rf(clk, regwriteW, ..., rdW, resultW, ...);
+
+  // ---------------------------
+  // WB Stage (handled externally or expanded in next iteration)
+endmodule

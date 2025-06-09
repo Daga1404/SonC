@@ -1,0 +1,257 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do Pipeline_Processor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor {C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:24 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor" C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v 
+# -- Compiling module riscvpipeline
+# 
+# Top level modules:
+# 	riscvpipeline
+# End time: 17:25:25 on Jun 09,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor {C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/regfile.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:25 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor" C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/regfile.v 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 17:25:25 on Jun 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor {C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:25 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor" C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v 
+# -- Compiling module pipelined_datapath
+# 
+# Top level modules:
+# 	pipelined_datapath
+# End time: 17:25:25 on Jun 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor {C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/flopenr.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:25 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor" C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/flopenr.v 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 17:25:25 on Jun 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor {C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/extend.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:25 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor" C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/extend.v 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 17:25:26 on Jun 09,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor {C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/alu.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:26 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor" C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 17:25:26 on Jun 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit {C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/maindec.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:26 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit" C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/maindec.v 
+# -- Compiling module maindec
+# 
+# Top level modules:
+# 	maindec
+# End time: 17:25:26 on Jun 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit {C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/controller.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:26 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit" C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/controller.v 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 17:25:26 on Jun 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit {C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/aludec.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:26 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit" C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/aludec.v 
+# -- Compiling module aludec
+# 
+# Top level modules:
+# 	aludec
+# End time: 17:25:27 on Jun 09,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers {C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/mem_wb.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:27 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers" C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/mem_wb.v 
+# -- Compiling module mem_wb
+# 
+# Top level modules:
+# 	mem_wb
+# End time: 17:25:27 on Jun 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers {C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/id_ex.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:27 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers" C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/id_ex.v 
+# -- Compiling module id_ex
+# 
+# Top level modules:
+# 	id_ex
+# End time: 17:25:27 on Jun 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers {C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/ex_mem.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:27 on Jun 09,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers" C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/ex_mem.v 
+# -- Compiling module ex_mem
+# 
+# Top level modules:
+# 	ex_mem
+# End time: 17:25:27 on Jun 09,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/testbenches {C:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 17:25:27 on Jun 09,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/testbenches" C:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv 
+# -- Compiling module riscvpipeline_tb
+# 
+# Top level modules:
+# 	riscvpipeline_tb
+# End time: 17:25:28 on Jun 09,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  riscvpipeline_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" riscvpipeline_tb 
+# Start time: 17:25:28 on Jun 09,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(62): (vopt-2685) [TFMPC] - Too few port connections for 'ext'.  Expected 3, found 2.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(62): (vopt-2718) [TFMPC] - Missing connection for port 'immsrc'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2685) [TFMPC] - Too few port connections for 'id_ex_reg'.  Expected 26, found 12.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'resultsrc_out'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'memwrite_out'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'regwrite_out'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'alusrc_out'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'alucontrol_out'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'rd_out'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'pc_out'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'resultsrc_in'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'memwrite_in'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'regwrite_in'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'alusrc_in'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'alucontrol_in'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'rd_in'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'pc_in'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2685) [TFMPC] - Too few port connections for 'dp'.  Expected 28, found 7.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'resultW'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'writeregW'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'forwardBE'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'forwardAE'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'rs2E'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'rs1E'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'rs2D'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'rs1D'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'alucontrolE'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'regwriteW'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'regwriteM'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'regwriteE'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'regwriteD'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'regdstE'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'alusrcE'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'memtoregW'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'memtoregM'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'memtoregE'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'jumpD'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'branchD'.
+# ** Warning: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v(35): (vopt-2718) [TFMPC] - Missing connection for port 'pcsrcD'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=40.
+# Loading sv_std.std
+# Loading work.riscvpipeline_tb(fast)
+# Loading work.riscvpipeline(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.aludec(fast)
+# Loading work.pipelined_datapath(fast)
+# Loading work.flopenr(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.id_ex(fast)
+# Loading work.alu(fast)
+# Loading work.ex_mem(fast)
+# Loading work.mem_wb(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'ResultSrc'. The port definition is at: C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/maindec.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /riscvpipeline_tb/uut/c/md File: C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/controller.v Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (25) does not match connection size (32) for port 'instr'. The port definition is at: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/extend.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /riscvpipeline_tb/uut/dp/ext File: C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v Line: 62
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-7) Failed to open readmem file "riscvtest.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv(39)
+#    Time: 0 ps  Iteration: 0  Instance: /riscvpipeline_tb
+# Instruction memory loaded.
+# 
+# --- Data Memory ---
+# Address   Data
+#    0     xxxxxxxx
+#    1     xxxxxxxx
+#    2     xxxxxxxx
+#    3     xxxxxxxx
+#    4     xxxxxxxx
+#    5     xxxxxxxx
+#    6     xxxxxxxx
+#    7     xxxxxxxx
+#    8     xxxxxxxx
+#    9     xxxxxxxx
+#   10     xxxxxxxx
+#   11     xxxxxxxx
+#   12     xxxxxxxx
+#   13     xxxxxxxx
+#   14     xxxxxxxx
+#   15     xxxxxxxx
+# ** Note: $finish    : C:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv(56)
+#    Time: 1010 ns  Iteration: 0  Instance: /riscvpipeline_tb
+# 1
+# Break in Module riscvpipeline_tb at C:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv line 56
+# End time: 17:27:12 on Jun 09,2025, Elapsed time: 0:01:44
+# Errors: 0, Warnings: 43

@@ -1,0 +1,339 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/dmart/SonC/Verilog/Pipelined/simulation/questa
+T_opt
+!s110 1749511531
+VF3V^U7b74ODjc@V3LLCXf1
+04 16 4 work riscvpipeline_tb fast 0
+=1-28d043685c43-68476d6a-1a7-96c0
+R0
+!s12b OEM100
+!s124 OEM10U13 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+valu
+2C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/alu.v
+Z3 !s110 1749511526
+!i10b 1
+!s100 0T`dZ>>aadKSOYW181YUn0
+IAgBW1@jAKI[IlQn2WzIZm0
+R1
+Z4 w1749508961
+8C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/alu.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/alu.v
+!i122 5
+L0 1 18
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z7 !s108 1749511526.000000
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor|C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/alu.v|
+!i113 0
+Z8 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+valudec
+2C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/aludec.v
+Z10 !s110 1749511527
+!i10b 1
+!s100 :Qk<K]H:7A1386hW_LXFN2
+I7>2GzZaFL_769PIGN]`HQ1
+R1
+Z11 w1749498158
+8C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/aludec.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/control_unit/aludec.v
+!i122 8
+Z12 L0 1 24
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/aludec.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit|C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/aludec.v|
+!i113 0
+R8
+Z13 !s92 -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vcontroller
+2C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/controller.v
+R3
+!i10b 1
+!s100 ^VMV8?k;ZN:`2>b1XHceN1
+IPHh5ETa<na5Sd00g]W6W?2
+R1
+R11
+8C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/controller.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/control_unit/controller.v
+!i122 7
+Z14 L0 1 22
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit|C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/controller.v|
+!i113 0
+R8
+R13
+R2
+vex_mem
+2C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/ex_mem.v
+R10
+!i10b 1
+!s100 oS]fmFSn_<fK76EBF7nK`1
+I]z<Wag>UTIL]k:C>4S`Lc2
+R1
+R4
+8C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/ex_mem.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/ex_mem.v
+!i122 11
+R12
+R5
+R6
+r1
+!s85 0
+31
+Z15 !s108 1749511527.000000
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/ex_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers|C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/ex_mem.v|
+!i113 0
+R8
+Z16 !s92 -vlog01compat -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vextend
+2C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/extend.v
+R3
+!i10b 1
+!s100 FW;<CEM5a;_GKoeDoOenL1
+IUC<Y_zVhb=Y1XB83zGFT03
+R1
+R11
+8C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/extend.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/extend.v
+!i122 4
+L0 1 21
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1749511525.000000
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/extend.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor|C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/extend.v|
+!i113 0
+R8
+R9
+R2
+vflopenr
+2C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/flopenr.v
+Z18 !s110 1749511525
+!i10b 1
+!s100 Lc0k67z3DV2HnP_>blTKJ0
+I24g=3`kO]jno:RS5BbI203
+R1
+w1749504334
+8C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/flopenr.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/flopenr.v
+!i122 3
+L0 1 12
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/flopenr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor|C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/flopenr.v|
+!i113 0
+R8
+R9
+R2
+vid_ex
+2C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/id_ex.v
+R10
+!i10b 1
+!s100 >YiiBR67zez6Cb04HXAVO2
+IJRD9Ez?_W9a@mzd[0CLF=2
+R1
+w1749503942
+8C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/id_ex.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/id_ex.v
+!i122 10
+L0 1 27
+R5
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/id_ex.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers|C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/id_ex.v|
+!i113 0
+R8
+R16
+R2
+vmaindec
+2C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/maindec.v
+R3
+!i10b 1
+!s100 F6B?J;A>eKlAb^QdB=Tgi3
+Ie?RI7W18@T^`9ZW8WPkE`2
+R1
+R11
+8C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/maindec.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/control_unit/maindec.v
+!i122 6
+R14
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/maindec.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/control_unit|C:/Users/dmart/SonC/Verilog/Pipelined/control_unit/maindec.v|
+!i113 0
+R8
+R13
+R2
+vmem_wb
+2C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/mem_wb.v
+R10
+!i10b 1
+!s100 FnVR]:iIW2`7_PSm2ZfeB2
+IK[^U0biX>WG6nmOaTeMSO1
+R1
+R4
+8C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/mem_wb.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/mem_wb.v
+!i122 9
+R12
+R5
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/mem_wb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers|C:/Users/dmart/SonC/Verilog/Pipelined/pipeline_registers/mem_wb.v|
+!i113 0
+R8
+R16
+R2
+vpipelined_datapath
+2C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v
+R18
+!i10b 1
+!s100 jTFU4KTPgaWEZVVU1Rl1M0
+Im8LU8h?_FKA1IE1H]4a;^1
+R1
+w1749508453
+8C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v
+!i122 2
+L0 1 135
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor|C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/pipelined_datapath.v|
+!i113 0
+R8
+R9
+R2
+vregfile
+2C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/regfile.v
+R18
+!i10b 1
+!s100 4=?6locahjHcdHZ8Q_;UI2
+I?3QhPWH5=zZfUAAeXzo8f2
+R1
+R11
+8C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/regfile.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/regfile.v
+!i122 1
+L0 1 16
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor|C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/regfile.v|
+!i113 0
+R8
+R9
+R2
+vriscvpipeline
+2C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v
+R18
+!i10b 1
+!s100 @c1PN80ckb6=JC]V1_Y]Z2
+IMT=1f2kKYh>I?V9VI39SC1
+R1
+w1749509284
+8C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v
+FC:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v
+!i122 0
+L0 1 40
+R5
+R6
+r1
+!s85 0
+31
+!s108 1749511524.000000
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor|C:/Users/dmart/SonC/Verilog/Pipelined/pipelined_processor/riscvpipeline.v|
+!i113 0
+R8
+R9
+R2
+vriscvpipeline_tb
+2C:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1749511528
+!i10b 1
+!s100 fI^V@W8<LQoL6LYlPkW302
+IS4j>cY1Fn5>DUA5Phf_gz3
+S1
+R1
+w1749506631
+8C:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv
+FC:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv
+!i122 12
+L0 3 57
+R5
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/dmart/SonC/Verilog/Pipelined/testbenches|C:/Users/dmart/SonC/Verilog/Pipelined/testbenches/riscvpipeline_tb.sv|
+!i113 0
+o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work +incdir+C:/Users/dmart/SonC/Verilog/Pipelined/testbenches -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
